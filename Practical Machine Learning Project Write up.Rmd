@@ -12,7 +12,8 @@ In this project, we will be to use data from accelerometers on the belt, forearm
 
 ### Data Processing
 
-We first load the R packages needed for analysis and then download the training and testing data sets from the given URLs.
+We first load the R packages needed for analysis and then download the training and testing data sets from the given URLs. Assuming the CSV has been downloaded and placed it in the working directory.
+
 
 ```{r}
 # import the data from the URLs
@@ -21,7 +22,6 @@ We first load the R packages needed for analysis and then download the training 
 # training <- source_data(trainurl, na.strings = c("NA", "#DIV/0!", ""), header = TRUE)
 # testing <- source_data(testurl, na.strings = c("NA", "#DIV/0!", ""), header = TRUE)
 
-setwd("C:/el@ine/zzCoursera/Module8")
 training <- read.csv("pml-training.csv", na.strings = c("NA", "#DIV/0!", ""))
 testing  <- read.csv("pml-testing.csv",  na.strings = c("NA", "#DIV/0!", ""))
 str(training, list.len=15)
